@@ -1,0 +1,12 @@
+<div class="checkout">
+  <p>
+    <strong>Total: {{ totalPrice | currency: "BRL" }}</strong>
+  </p>
+
+  <!-- <a href="form">
+    <button >
+      <span>Finalizar a compra</span>
+    </button>
+  </a> -->
+  <app-finish-shopping [pagePath]="'form'" ></app-finish-shopping>
+</div>

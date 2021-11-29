@@ -1,0 +1,14 @@
+<section class="cards">
+    <div class="card" *ngFor="let item of items">
+    <img [src]="item.imagePath" alt="Capa do jogo">
+    <div class="game-info">
+      <h2>{{ item.name }}</h2>
+      <span>{{ category }}</span>
+      <p class="description"> {{ item.description }} </p>
+      <p><strong>{{ item.price | currency: 'BRL' }}</strong></p>
+      <app-buy-button (click)="addToCart(item)"></app-buy-button>
+    </div>
+  </div>
+</section>
+
+<app-floating-cart></app-floating-cart>

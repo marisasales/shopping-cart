@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background-image: url('https://cdn.pixabay.com/photo/2015/02/07/02/17/paper-626781_1280.jpg');
+  background-size: cover;
+}
+

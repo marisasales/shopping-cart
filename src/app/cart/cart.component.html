@@ -1,0 +1,41 @@
+<div class="items">
+  <!-- FIXME: Só exibir se o TotalPrice for maior que 0 -->
+  <table>
+    <thead>
+      <th></th>
+      <th>Produto</th>
+      <th>Preço</th>
+      <th>Quantidade</th>
+      <th>Total</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td>
+          <img src="{{ item.imagePath }}" alt="{{ item.name }}" />
+        </td>
+        <td>
+          <span>{{ item.name }}</span>
+        </td>
+        <td>
+          <span>{{ item.price | currency: "BRL" }}</span>
+        </td>
+        <td>
+          <button (click)="subtract(item)" >
+            <i class="fas fa-minus"></i>
+          </button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="add(item)" >
+            <i class="fas fa-plus"></i>
+          </button>
+        </td>
+        <td>
+          <span>
+            {{ item.price * item.quantity | currency: "BRL" }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-checkout [totalPrice]="totalPrice"></app-checkout>

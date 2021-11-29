@@ -1,0 +1,50 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <h2>Formulário</h2>
+  <div class="form-inputs">
+    <label>
+      <span>*Nome Completo</span>
+      <input type="text" name="fullName" required ngModel />
+    </label>
+
+    <label>
+      <span>*CPF</span>
+      <input type="number" name="cpf" required ngModel />
+    </label>
+
+    <label>
+      <span>*CEP</span>
+      <input type="number" name="cep" required ngModel />
+    </label>
+
+    <label>
+      <span>*Endereço</span>
+      <input type="text" name="address" required ngModel />
+    </label>
+
+    <label>
+      <span>*Cidade</span>
+      <input type="text" name="city" required ngModel />
+    </label>
+
+    <label>
+      <span>*Estado</span>
+      <input type="text" name="state" required ngModel />
+    </label>
+
+    <label>
+      <span>*E-mail</span>
+      <input type="email" name="email" required ngModel email />
+    </label>
+
+    <label>
+      <span>Telefone</span>
+      <input type="tel" name="tel" ngModel />
+    </label>
+  </div>
+
+  <div class="button">
+    <app-finish-shopping [buttonType]="'submit'" [pagePath]="''"></app-finish-shopping>
+  </div>
+</form>
+
+<app-floating-cart></app-floating-cart>
